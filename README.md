@@ -30,6 +30,7 @@ The user decides:
 - optional source branching from external editorial feeds
 - optional community CTA
 - slot-based posting policy
+- reply-lane hardening (target validation, skip-on-failure, explicit publish state)
 
 ### Typical usage flow
 1. User asks their agent to install or adapt the system
@@ -42,6 +43,7 @@ The user decides:
 - `SKILL.md` — agent instructions
 - `references/setup-questionnaire.md` — onboarding questions
 - `references/rollout-modes.md` — rollout decisions
+- `references/operational-hardening.md` — live-mode reliability guidance
 - `scripts/scaffold_x_growth_project.py` — creates a new generic project scaffold
 
 ### Important design choice

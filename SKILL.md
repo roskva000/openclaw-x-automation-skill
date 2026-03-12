@@ -36,6 +36,8 @@ A reusable X automation system with these layers:
 - Default new installs to **dry-run**.
 - If the user wants aggressive automation, still keep daily/monthly caps in config.
 - Never silently copy private tokens, links, handles, or niche assumptions from another project.
+- Treat reply automation as a higher-risk lane than normal posts.
+- In live mode, require clear logging for posted / skipped / failed outcomes.
 
 ## Ask these questions before scaffolding
 
@@ -97,6 +99,7 @@ The JSON may include fields like:
 - Keep hard caps documented.
 - Confirm whether replies should include CTA or not.
 - Do not remove quality gates unless asked.
+- Keep reply-specific safeguards even in aggressive mode: target validation, skip-on-failure, and per-day caps.
 
 ### If user says “I want community integration”
 - Ask whether the external community/feed is:

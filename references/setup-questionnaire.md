@@ -28,6 +28,8 @@ Ask only what is still missing.
 - If yes, what link should be used?
 - Which platform is that community on?
 - Should CTA appear only in reply automation, or also in normal posts?
+- Should replies prefer mentions only, or may they also target search-discovered tweets?
+- If a reply fails because of target restrictions, should the system skip the slot or try another reply candidate?
 
 ## 5. Live vs Dry-run
 - Start in dry-run or live mode?

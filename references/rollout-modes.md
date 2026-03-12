@@ -30,6 +30,12 @@ Required:
 
 These are defaults, not hardcoded rules. The user may choose a different mix.
 
+## Reply-lane guidance
+- Prefer reply-safe targets first (mentions or clearly open discussions)
+- Validate reply targets where possible
+- If a reply fails permanently, skip that slot and continue
+- Always record whether the reply was posted, skipped, or failed
+
 ## If the user wants aggressive mode
 Still encode:
 - daily max
