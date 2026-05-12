@@ -20,6 +20,7 @@ DEFAULT_PROFILE = {
     "source_branching_label": "",
     "bird_enabled": True,
     "x_api_enabled": True,
+    "tweetclaw_enabled": False,
     "live_publish": False
 }
 
@@ -32,6 +33,7 @@ Reusable X growth automation scaffold.
 - Bird for discovery
 - X API for publishing
 - no platform-specific community/source assumptions
+- managed provider credentials belong in OpenClaw plugin config, not this scaffold
 
 ## Customize first
 - config/topics.json
@@ -154,7 +156,8 @@ def main():
         },
         "providers": {
             "bird": bool(profile["bird_enabled"]),
-            "x_api": bool(profile["x_api_enabled"])
+            "x_api": bool(profile["x_api_enabled"]),
+            "tweetclaw": bool(profile["tweetclaw_enabled"])
         }
     })
 
@@ -176,7 +179,8 @@ def main():
         "primary_language": profile["primary_language"],
         "secondary_languages": profile["secondary_languages"],
         "daily_range": [profile["daily_min"], profile["daily_max"]],
-        "monthly_cap": profile["monthly_cap"]
+        "monthly_cap": profile["monthly_cap"],
+        "tweetclaw_enabled": bool(profile["tweetclaw_enabled"])
     }, ensure_ascii=False, indent=2))
 
 

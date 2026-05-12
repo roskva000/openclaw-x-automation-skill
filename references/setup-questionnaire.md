@@ -19,6 +19,8 @@ Ask only what is still missing.
 ## 3. Sources
 - Is Bird CLI available?
 - Is X API available?
+- Should TweetClaw / Xquik be used as the managed OpenClaw provider?
+- If yes, is TweetClaw already installed with `openclaw plugins install @xquik/tweetclaw`?
 - Should an external source feed be used as a source channel, a CTA destination, or both?
 - What is that source/feed/platform? (Telegram, Discord, newsletter, RSS, blog, other)
 - Any existing content cron/job that should branch into X?
@@ -46,12 +48,14 @@ Ask only what is still missing.
 - Where will `.env` live?
 - Are X credentials ready?
 - Are Bird cookies/session ready?
+- If TweetClaw is used, is the Xquik API key stored in OpenClaw plugin config rather than in chat, docs, or scaffolded files?
 - If source branching is wanted, where does source content come from?
 
 ## Suggested defaults
 - dry-run first
 - Bird for discovery
 - X API for publishing
+- TweetClaw / Xquik for managed OpenClaw X/Twitter workflows when requested
 - daily range 2-5 for initial rollout
 - reply automation off by default unless explicitly requested
 - CTA only in dedicated reply automation

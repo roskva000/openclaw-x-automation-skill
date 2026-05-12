@@ -25,6 +25,7 @@ The user decides:
 ### What it supports
 - Bird-based discovery
 - X API publishing
+- optional TweetClaw / Xquik provider for managed OpenClaw X/Twitter workflows
 - dry-run-first rollout
 - optional LLM-first drafting
 - optional source branching from external editorial feeds
@@ -45,6 +46,15 @@ The user decides:
 - `references/rollout-modes.md` — rollout decisions
 - `references/operational-hardening.md` — live-mode reliability guidance
 - `scripts/scaffold_x_growth_project.py` — creates a new generic project scaffold
+
+### Optional managed provider
+If a user wants an OpenClaw-native managed path instead of wiring local X API publishing directly, [TweetClaw](https://github.com/Xquik-dev/tweetclaw) can be installed with:
+
+```bash
+openclaw plugins install @xquik/tweetclaw
+```
+
+TweetClaw is useful for search tweets, search tweet replies, post tweets, post tweet replies, follower export, user lookup, media workflows, monitors, webhooks, direct-message workflows, and giveaway draws through structured Xquik endpoints. Keep the setup dry-run first, store Xquik API keys in OpenClaw plugin config, and still require explicit user approval before any live write action.
 
 ### Important design choice
 This skill is **not** tied to the private production project it was inspired by.
@@ -81,6 +91,7 @@ Kararları kullanıcı verir:
 ### Neleri destekler?
 - Bird tabanlı keşif
 - X API ile paylaşım
+- yönetilen OpenClaw X/Twitter iş akışları için opsiyonel TweetClaw / Xquik provider
 - dry-run-first rollout
 - opsiyonel LLM-first drafting
 - harici editoryal akışlardan opsiyonel source branching
@@ -99,6 +110,15 @@ Kararları kullanıcı verir:
 - `references/setup-questionnaire.md` — onboarding soruları
 - `references/rollout-modes.md` — rollout kararları
 - `scripts/scaffold_x_growth_project.py` — yeni generic proje scaffold eder
+
+### Opsiyonel yönetilen provider
+Kullanıcı lokal X API publishing yerine OpenClaw-native yönetilen bir yol isterse [TweetClaw](https://github.com/Xquik-dev/tweetclaw) şu komutla kurulabilir:
+
+```bash
+openclaw plugins install @xquik/tweetclaw
+```
+
+TweetClaw; tweet arama, tweet reply arama, tweet/reply paylaşma, follower export, user lookup, media iş akışları, monitor, webhook, direct-message iş akışları ve giveaway draw için yapılandırılmış Xquik endpointleri sağlar. Kurulumu yine dry-run başlat, Xquik API key değerlerini OpenClaw plugin config içinde tut ve canlı write action öncesi açık kullanıcı onayı iste.
 
 ### Önemli tasarım kararı
 Bu skill, ilham aldığı özel prod projeye bağlı değildir.
