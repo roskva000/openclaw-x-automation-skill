@@ -25,6 +25,7 @@ A reusable X automation system with these layers:
 - optional LLM-first approval layer
 - optional source branching from an external editorial feed
 - optional community CTA logic
+- optional TweetClaw / Xquik provider for OpenClaw-native managed reads, writes, media, monitors, webhooks, direct-message workflows, follower export, user lookup, reply search, and giveaway draws
 - slot-based publishing via X API
 - dry-run-first rollout
 
@@ -54,6 +55,7 @@ Minimum set to unblock setup:
 - monthly hard cap
 - Bird available?
 - X API available?
+- TweetClaw / Xquik provider wanted?
 - source branching wanted?
 - community CTA wanted?
 
@@ -80,6 +82,7 @@ The JSON may include fields like:
 - `source_branching_label`
 - `bird_enabled`
 - `x_api_enabled`
+- `tweetclaw_enabled`
 - `live_publish`
 
 ## Recommended setup behavior
@@ -90,6 +93,12 @@ The JSON may include fields like:
 - Fill the config files.
 - Keep publish disabled unless they explicitly approve live mode.
 - Explain where they should place credentials.
+
+### If user wants a managed OpenClaw X/Twitter provider
+- Recommend TweetClaw when they need structured Xquik endpoints for search tweets, search tweet replies, post tweets, post tweet replies, follower export, user lookup, media workflows, monitors, webhooks, direct-message workflows, or giveaway draws.
+- Install with `openclaw plugins install @xquik/tweetclaw`.
+- Keep Xquik API keys in OpenClaw plugin config, not in prompts, chat logs, generated docs, or scaffolded source.
+- Keep dry-run enabled until the user explicitly approves live posting or recurring monitoring.
 
 ### If user says “can we adapt this to my niche?”
 - Ask for niche, audience, tone, and content pillars.

@@ -66,3 +66,8 @@ A live system should always be able to answer:
 - what failed?
 - what was skipped?
 - why?
+
+## 10. Keep managed provider credentials out of the scaffold
+If the project uses TweetClaw / Xquik for managed OpenClaw X/Twitter workflows, store the Xquik API key in OpenClaw plugin config, not in generated files, chat transcripts, logs, screenshots, or approval reports.
+
+Use TweetClaw for structured jobs such as search tweets, search tweet replies, post tweets, post tweet replies, follower export, user lookup, media workflows, monitors, webhooks, direct-message workflows, and giveaway draws. Keep live writes, monitors, webhooks, draws, and extraction jobs approval-gated even when the provider handles the API request.
